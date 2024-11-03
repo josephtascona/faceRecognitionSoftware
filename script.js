@@ -54,11 +54,19 @@ function handleEmotion(detections) {
                 break;
             case "neutral":
                 document.body.style.backgroundColor = "lightgray";
-                displayMessage("Looking neutral. 😐");
+                displayMessage("Looking neutral. 😐 Make an emotion!");
                 break;
-            default:
-                document.body.style.backgroundColor = "white";
-                displayMessage("");
+            case "angry":
+                document.body.style.backgroundColor = "red";
+                displayMessage("Looking angry! 😤");
+                break;
+            case "disgusted":
+                document.body.style.backgroundColor = "green";
+                displayMessage("You look disgusted. 🤮");
+                break;
+            case "surprised":
+                document.body.style.backgroundColor = "purple";
+                displayMessage("Looking surprised. 😐");
                 break;
         }
     });
