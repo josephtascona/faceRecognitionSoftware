@@ -66,7 +66,7 @@ function handleEmotion(detections) {
                 break;
             case "surprised":
                 document.body.style.backgroundColor = "purple";
-                displayMessage("Looking surprised. 😐");
+                displayMessage("Looking surprised. 😳");
                 break;
         }
     });
