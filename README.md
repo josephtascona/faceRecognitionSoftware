@@ -15,4 +15,4 @@ A simple app that changes the colour of the screen and prompt based off the emot
 2. Open `index.html` in your browser.
 ## Notes
 - This app is optomized for desktop only.
-- Make sure to not be too close to your camera otherwise it will not pick up your emotions.
+- Make sure to not be too close to your camera otherwise it will not pick up your emotions. In general the further the better within limits.
