@@ -4,10 +4,27 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 canvas {
     position: absolute;
+}
+
+video {
+    max-width: 720px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+/* Styles for message container */
+#message-container {
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
 }

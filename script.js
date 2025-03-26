@@ -78,13 +78,16 @@ function displayMessage(message) {
     if (!messageDiv) {
         messageDiv = document.createElement('div');
         messageDiv.id = 'emotion-message';
-        messageDiv.style.position = 'fixed';
-        messageDiv.style.bottom = '20px';
-        messageDiv.style.width = '100%';
         messageDiv.style.textAlign = 'center';
         messageDiv.style.fontSize = '24px';
         messageDiv.style.color = '#333';
-        document.body.appendChild(messageDiv);
+        messageDiv.style.marginTop = '20px';
+        const container = document.getElementById('message-container');
+        if (container) {
+            container.appendChild(messageDiv);
+        } else {
+            document.body.appendChild(messageDiv);
+        }
     }
     messageDiv.textContent = message;
 }
