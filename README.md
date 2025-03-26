@@ -14,5 +14,5 @@ A simple app that changes the colour of the screen and prompt based off the emot
 1. Clone the repo
 2. Open `index.html` with Live Server on VS Code.
 ## Notes
-- This app is optomized for desktop only.
+- This app is optomized for desktop, however it does work on mobile just not ideally.
 - Make sure to not be too close to your camera otherwise it will not pick up your emotions. In general the further the better within limits.
