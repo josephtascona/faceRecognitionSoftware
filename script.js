@@ -9,7 +9,7 @@ Promise.all([
 
 function startVideo() {
     navigator.mediaDevices.getUserMedia(
-        { video: {} }
+        { video: { width: { ideal: 1280 }, height: { ideal: 720 } } }
     ).then(stream => {
         video.srcObject = stream;
     }).catch(err => console.error("Error accessing webcam: ", err));
@@ -22,7 +22,7 @@ video.addEventListener('play', () => {
     faceapi.matchDimensions(canvas, displaySize);
 
     setInterval(async () => {
-        const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+        const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions({ inputSize: 320, scoreThreshold: 0.5 })).withFaceLandmarks().withFaceExpressions();
         const resizedDetections = faceapi.resizeResults(detections, displaySize);
         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
         faceapi.draw.drawDetections(canvas, resizedDetections);
